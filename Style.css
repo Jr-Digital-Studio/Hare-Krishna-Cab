@@ -1,0 +1,453 @@
+/* Project: Hare Krishna Cab Services 
+   Theme: Black, Yellow & White 
+   Design by: JR Digital Studio
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --yellow: #ffcc00;
+  --light-yellow: #fff9e6;
+  --black: #000000;
+  --grey-text: #666;
+  --white: #ffffff;
+  --bg-light: #f9f9f9;
+  --whatsapp-green: #25D366;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--black);
+  line-height: 1.6;
+}
+
+a { text-decoration: none; }
+
+/* --- Navigation & Header --- */
+header {
+  background: var(--black);
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--yellow);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.logo img {
+  height: 45px;
+  border-radius: 5px;
+}
+
+nav a {
+  color: var(--white);
+  margin-left: 25px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--yellow);
+}
+
+/* --- Hero Section --- */
+.hero {
+  background: var(--black);
+  color: var(--white);
+  padding: 80px 5%;
+  border-bottom: 8px solid var(--yellow);
+}
+
+.hero-wrap {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-text h1 span {
+  color: var(--yellow);
+}
+
+.hero-text p {
+  opacity: 0.8;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.hero-image img {
+  max-width: 100%;
+  filter: drop-shadow(0 15px 25px rgba(255,204,0,0.2));
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* --- Common Headings --- */
+.section {
+  padding: 70px 5%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.sub-heading {
+  text-align: center;
+  color: var(--grey-text);
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.main-title::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background: var(--yellow);
+  display: block;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+/* --- Why Choose Us (Image 2 Style) --- */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.feature-card {
+  text-align: center;
+  padding: 30px 20px;
+  background: var(--white);
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  background: var(--yellow);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 28px;
+  color: var(--black);
+  box-shadow: 0 10px 20px rgba(255,204,0,0.2);
+}
+
+.feature-card h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: var(--grey-text);
+}
+
+/* --- Our Services (Image 1 Style) --- */
+.highlight-bg {
+  background: var(--bg-light);
+  border-radius: 30px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: var(--white);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+  transition: 0.4s;
+  border: 1px solid #f0f0f0;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--yellow);
+}
+
+.service-icon-box {
+  width: 55px;
+  height: 55px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.yellow-bg { background: var(--yellow); color: var(--black); }
+.light-yellow-bg { background: var(--light-yellow); color: var(--yellow); }
+
+.service-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.service-card p {
+  font-size: 15px;
+  color: var(--grey-text);
+  margin-bottom: 25px;
+}
+
+.view-details {
+  color: var(--yellow);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* --- Pricing Page Specifics --- */
+.price-box {
+  background: #fdfdfd;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px dashed #ccc;
+}
+
+.price-box p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.price-tag {
+  color: var(--black);
+  background: var(--yellow);
+  padding: 2px 12px;
+  border-radius: 6px;
+}
+
+.btn-book {
+  display: block;
+  text-align: center;
+  background: var(--black);
+  color: var(--yellow);
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.btn-book:hover {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+/* --- Buttons --- */
+.btn {
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-weight: 700;
+  display: inline-block;
+  transition: 0.3s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-call { background: var(--yellow); color: var(--black); }
+.btn-wa { background: var(--whatsapp-green); color: white; margin-left: 10px; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* --- Fancy Footer --- */
+.footer-fancy {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 60px 5% 20px;
+  margin-top: 50px;
+  border-top: 5px solid var(--yellow);
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.footer-brand p {
+  color: #bbb;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.footer-links h4, .footer-contact h4 {
+  color: var(--yellow);
+  margin-bottom: 25px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.footer-links ul { list-style: none; }
+.footer-links ul li { margin-bottom: 12px; }
+.footer-links ul li a { color: #bbb; transition: 0.3s; }
+.footer-links ul li a:hover { color: var(--yellow); padding-left: 5px; }
+
+.footer-contact p { color: #bbb; font-size: 14px; margin-bottom: 12px; }
+.footer-contact i { color: var(--yellow); margin-right: 10px; }
+
+.footer-socials { margin-top: 20px; }
+.footer-socials a {
+  color: #fff; background: #222; width: 40px; height: 40px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 50%; margin-right: 10px; transition: 0.3s;
+}
+.footer-socials a:hover { background: var(--yellow); color: #000; transform: translateY(-5px); }
+
+.footer-bottom {
+  border-top: 1px solid #222;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.copyright, .creator { font-size: 12px; color: #666; }
+.creator a { color: #888; font-weight: 700; }
+.creator a:hover { color: var(--yellow); }
+
+/* --- Mobile Sticky Menu --- */
+.sticky-mobile {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  z-index: 2000;
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-call-sticky, .btn-wa-sticky {
+  flex: 1;
+  text-align: center;
+  padding: 18px;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.btn-call-sticky { background: var(--yellow); color: #000; }
+.btn-wa-sticky { background: var(--whatsapp-green); color: #fff; }
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .hero-wrap { flex-direction: column; text-align: center; }
+  .hero-text h1 { font-size: 30px; }
+  .btn-wa { margin-left: 0; margin-top: 10px; }
+  .footer-bottom { flex-direction: column; gap: 10px; text-align: center; padding-bottom: 90px; }
+  .section { padding-bottom: 80px; }
+}
+/* --- Fancy Service Areas --- */
+.areas-section {
+  background: var(--bg-light);
+  border-radius: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.areas-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.area-card {
+  background: var(--white);
+  padding: 15px 30px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+
+.area-card i {
+  color: var(--yellow);
+  font-size: 18px;
+}
+
+.area-card span {
+  font-weight: 600;
+  color: var(--black);
+  font-size: 16px;
+}
+
+.area-card:hover {
+  border-color: var(--yellow);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 204, 0, 0.2);
+}
+
+.area-note {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: var(--grey-text);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .area-card {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
