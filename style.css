@@ -15,14 +15,19 @@
   --whatsapp-green: #25D366;
 }
 
+/* --- Global Fix for Horizontal Spacing --- */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Isse padding width ke andar rehti hai */
   font-family: 'Poppins', sans-serif;
 }
 
-body {
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* Side space (Horizontal scroll) ko khatam karne ke liye */
+  position: relative;
   background-color: var(--white);
   color: var(--black);
   line-height: 1.6;
@@ -74,6 +79,7 @@ nav a:hover {
   color: var(--white);
   padding: 80px 5%;
   border-bottom: 8px solid var(--yellow);
+  overflow: hidden; /* Hero animation ko bahar jaane se rokta hai */
 }
 
 .hero-wrap {
@@ -100,8 +106,15 @@ nav a:hover {
   font-size: 18px;
 }
 
+/* Hero Image Fix for Mobile */
+.hero-image {
+    max-width: 100%;
+}
+
 .hero-image img {
   max-width: 100%;
+  height: auto;
+  display: block;
   filter: drop-shadow(0 15px 25px rgba(255,204,0,0.2));
   animation: float 3s ease-in-out infinite;
 }
@@ -116,6 +129,7 @@ nav a:hover {
   padding: 70px 5%;
   max-width: 1200px;
   margin: auto;
+  overflow: hidden; /* Isse koi card bahar nahi jayega */
 }
 
 .sub-heading {
@@ -146,7 +160,7 @@ nav a:hover {
   border-radius: 2px;
 }
 
-/* --- Why Choose Us (Image 2 Style) --- */
+/* --- Why Choose Us --- */
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -186,7 +200,7 @@ nav a:hover {
   color: var(--grey-text);
 }
 
-/* --- Our Services (Image 1 Style) --- */
+/* --- Our Services --- */
 .highlight-bg {
   background: var(--bg-light);
   border-radius: 30px;
@@ -383,20 +397,25 @@ nav a:hover {
 .btn-call-sticky { background: var(--yellow); color: #000; }
 .btn-wa-sticky { background: var(--whatsapp-green); color: #fff; }
 
-/* --- Responsive --- */
+/* --- Responsive Fixes --- */
 @media (max-width: 768px) {
-  .hero-wrap { flex-direction: column; text-align: center; }
-  .hero-text h1 { font-size: 30px; }
-  .btn-wa { margin-left: 0; margin-top: 10px; }
+  .hero-wrap { flex-direction: column; text-align: center; width: 100%; overflow: hidden; }
+  .hero-text h1 { font-size: 28px; }
+  .hero-image { width: 100%; overflow: hidden; }
+  .hero-image img { max-width: 90%; margin: 0 auto; }
+  .btn-wa { margin-left: 0; margin-top: 10px; width: 100%; }
+  .btn-call { width: 100%; }
   .footer-bottom { flex-direction: column; gap: 10px; text-align: center; padding-bottom: 90px; }
-  .section { padding-bottom: 80px; }
+  .section { padding-bottom: 80px; width: 100%; }
 }
+
 /* --- Fancy Service Areas --- */
 .areas-section {
   background: var(--bg-light);
   border-radius: 30px;
   margin-top: 50px;
   margin-bottom: 50px;
+  width: 100%;
 }
 
 .areas-container {
@@ -404,7 +423,7 @@ nav a:hover {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  max-width: 1000px;
+  max-width: 100%;
   margin: 0 auto;
 }
 

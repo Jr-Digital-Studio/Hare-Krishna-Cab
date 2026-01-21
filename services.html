@@ -3,13 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Cab Services & Price List | Hare Krishna Cab</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-<header>
+<body style="overflow-x: hidden; width: 100%;"> <header>
   <div class="logo">
     <img src="hare.png" alt="Hare Krishna Cab Services">
     <span>Hare Krishna Cab</span>
@@ -98,15 +96,10 @@
       </div>
       <p>Reliable One Way & Outstation Cab Service from Vadodara & Ahmedabad. High quality service at fixed prices.</p>
     </div>
-
     <div class="footer-links">
       <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-      </ul>
+      <ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li></ul>
     </div>
-
     <div class="footer-contact">
       <h4>Contact Us</h4>
       <p><i class="fas fa-phone"></i> +91 63559 37272</p>
@@ -117,7 +110,6 @@
       </div>
     </div>
   </div>
-
   <div class="footer-bottom">
     <p class="copyright">&copy; 2026 Hare Krishna Cab Services. All rights reserved.</p>
     <p class="creator">Created by <a href="#">JR Digital Studio</a></p>
@@ -128,9 +120,13 @@
   <a href="tel:+916355937272" class="btn-call-sticky">📞 Call</a>
   <a href="https://wa.me/916355937272" class="btn-wa-sticky">💬 WhatsApp</a>
 </div>
-// Example code to fetch price
+
+<script>
 firebase.database().ref('prices/vadodara_ahmedabad').on('value', (snapshot) => {
-    document.getElementById('price-va').innerText = "₹" + snapshot.val();
+    const el = document.getElementById('price-va');
+    if(el) el.innerText = "₹" + snapshot.val();
 });
+</script>
+
 </body>
 </html>

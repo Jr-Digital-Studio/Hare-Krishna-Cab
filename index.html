@@ -2,15 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Hare Krishna Cab Services | One Way Taxi</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Reliable one way & outstation cab service from Vadodara and Ahmedabad with fixed pricing.">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-<header>
+<body style="overflow-x: hidden; width: 100%;"> <header>
   <div class="logo">
     <img src="hare.png" alt="Hare Krishna Cab Services">
     <span>Hare Krishna Cab</span>
@@ -72,7 +70,6 @@
 <section class="section highlight-bg">
   <p class="sub-heading">OUR SERVICES</p>
   <h2 class="main-title">Comprehensive Taxi Solutions</h2>
-  
   <div class="service-grid">
     <div class="service-card">
       <div class="service-icon-box yellow-bg"><i class="fas fa-route"></i></div>
@@ -80,14 +77,12 @@
       <p>Affordable one-way taxi service between cities with fixed pricing.</p>
       <a href="services.html" class="view-details">View Details →</a>
     </div>
-
     <div class="service-card">
       <div class="service-icon-box light-yellow-bg"><i class="fas fa-plane-departure"></i></div>
       <h3>Airport Taxi Service</h3>
       <p>Reliable airport transfers from Vadodara and Ahmedabad. Available 24/7.</p>
       <a href="https://wa.me/916355937272?text=Hi,%20I%20want%20to%20inquire%20about%20Airport%20Taxi%20Service." class="view-details">View Details →</a>
     </div>
-
     <div class="service-card">
       <div class="service-icon-box light-yellow-bg"><i class="fas fa-map-marked-alt"></i></div>
       <h3>Outstation Cab Service</h3>
@@ -95,7 +90,6 @@
       <a href="https://wa.me/916355937272?text=Hi,%20I%20want%20to%20inquire%20about%20Outstation%20Cab%20Service." class="view-details">View Details →</a>
     </div>
   </div>
-
   <div class="special-service-note">
     <p><i class="fas fa-gem"></i> <strong>Note:</strong> Luxurious Cars also available for <strong>Marriage & Events</strong>. <a href="https://wa.me/916355937272">Inquire Now</a></p>
   </div>
@@ -105,26 +99,11 @@
   <p class="sub-heading">OUR NETWORK</p>
   <h2 class="main-title">Major Service Areas</h2>
   <div class="areas-container">
-    <div class="area-card">
-      <i class="fas fa-map-marker-alt"></i>
-      <span>Vadodara</span>
-    </div>
-    <div class="area-card">
-      <i class="fas fa-map-marker-alt"></i>
-      <span>Ahmedabad</span>
-    </div>
-    <div class="area-card">
-      <i class="fas fa-map-marker-alt"></i>
-      <span>Mumbai</span>
-    </div>
-    <div class="area-card">
-      <i class="fas fa-map-marker-alt"></i>
-      <span>Surat</span>
-    </div>
-    <div class="area-card">
-      <i class="fas fa-map-marker-alt"></i>
-      <span>Udaipur</span>
-    </div>
+    <div class="area-card"><i class="fas fa-map-marker-alt"></i><span>Vadodara</span></div>
+    <div class="area-card"><i class="fas fa-map-marker-alt"></i><span>Ahmedabad</span></div>
+    <div class="area-card"><i class="fas fa-map-marker-alt"></i><span>Mumbai</span></div>
+    <div class="area-card"><i class="fas fa-map-marker-alt"></i><span>Surat</span></div>
+    <div class="area-card"><i class="fas fa-map-marker-alt"></i><span>Udaipur</span></div>
   </div>
   <p class="area-note">And all major cities in Gujarat, Maharashtra & Rajasthan.</p>
 </section>
@@ -138,15 +117,10 @@
       </div>
       <p>Reliable One Way & Outstation Cab Service from Vadodara & Ahmedabad. High quality service at fixed prices.</p>
     </div>
-
     <div class="footer-links">
       <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-      </ul>
+      <ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li></ul>
     </div>
-
     <div class="footer-contact">
       <h4>Contact Us</h4>
       <p><i class="fas fa-phone"></i> +91 63559 37272</p>
@@ -157,7 +131,6 @@
       </div>
     </div>
   </div>
-
   <div class="footer-bottom">
     <p class="copyright">&copy; 2026 Hare Krishna Cab Services. All rights reserved.</p>
     <p class="creator">Created by <a href="#">JR Digital Studio</a></p>
@@ -168,9 +141,15 @@
   <a href="tel:+916355937272" class="btn-call-sticky">📞 Call</a>
   <a href="https://wa.me/916355937272" class="btn-wa-sticky">💬 WhatsApp</a>
 </div>
-// Example code to fetch price
+
+<script>
 firebase.database().ref('prices/vadodara_ahmedabad').on('value', (snapshot) => {
-    document.getElementById('price-va').innerText = "₹" + snapshot.val();
+    const priceElement = document.getElementById('price-va');
+    if(priceElement) {
+        priceElement.innerText = "₹" + snapshot.val();
+    }
 });
+</script>
+
 </body>
 </html>
