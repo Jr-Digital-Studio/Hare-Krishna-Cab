@@ -125,6 +125,43 @@
     <p class="area-note">And all major cities in Gujarat, Maharashtra & Rajasthan.</p>
   </section>
 
+  <!-- NEW SOCIAL SECTION ADDED -->
+  <section class="section">
+    <p class="sub-heading">TRAVEL UPDATES</p>
+    <h2 class="main-title">Our Latest Services & Routes</h2>
+
+    <div class="service-grid">
+
+      <div class="service-card">
+        <img src="luxury-wedding-car-vadodara.jpeg" 
+             alt="Luxury Wedding Car Rental in Vadodara Marriage Car Service"
+             style="width:100%; border-radius:10px; margin-bottom:10px;">
+        <h3>Luxury Wedding Car Rental in Vadodara</h3>
+        <p>Premium luxury cars available for marriage, bride & groom entry and special events with professional chauffeur service.</p>
+        <a href="https://wa.me/916355937272?text=Hi,%20I%20want%20to%20book%20Luxury%20Wedding%20Car." class="view-details">Book Now →</a>
+      </div>
+
+      <div class="service-card">
+        <img src="vadodara-ahmedabad-mumbai-one-way-cab.jpeg" 
+             alt="Vadodara Ahmedabad Mumbai Surat Udaipur One Way Cab Service"
+             style="width:100%; border-radius:10px; margin-bottom:10px;">
+        <h3>One Way & Outstation Cab Service</h3>
+        <p>Vadodara, Ahmedabad, Mumbai, Surat & Udaipur one way taxi service with fixed pricing. Affordable and reliable travel.</p>
+        <a href="tel:6355937272" class="view-details">Call Now →</a>
+      </div>
+
+      <div class="service-card">
+        <img src="flight-train-tour-booking-vadodara.jpeg" 
+             alt="Flight Ticket Train Booking Tour Package Services in Vadodara Coming Soon"
+             style="width:100%; border-radius:10px; margin-bottom:10px;">
+        <h3>Flight Booking, Train Ticket, & Tour Package  – Coming Soon</h3>
+        <p>Flight ticket booking, train reservation, hotel booking and India tour packages including Andaman, North East & Sri Lanka.</p>
+        <a href="https://wa.me/916355937272?text=Hi,%20I%20want%20more%20information%20about%20Tour%20Packages." class="view-details">Inquire →</a>
+      </div>
+
+    </div>
+  </section>
+
   <footer class="footer-fancy">
     <div class="footer-top">
       <div class="footer-brand">
@@ -161,15 +198,6 @@
     <a href="tel:6355937272" class="btn-call-sticky">📞 Call</a>
     <a href="https://wa.me/916355937272" class="btn-wa-sticky">💬 WhatsApp</a>
   </div>
-
-  <script>
-    firebase.database().ref('prices/vadodara_ahmedabad').on('value', (snapshot) => {
-      const priceElement = document.getElementById('price-va');
-      if (priceElement) {
-        priceElement.innerText = "₹" + snapshot.val();
-      }
-    });
-  </script>
 
 </body>
 </html>
