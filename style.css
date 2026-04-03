@@ -470,9 +470,10 @@ nav a:hover {
     font-size: 14px;
   }
 }
+
 /* --- Booking Form Section --- */
 .booking-container {
-    background: var(--black); /* Background black rakha hai taaki yellow form standout kare */
+    background: var(--black);
     padding: 60px 5%;
     display: flex;
     justify-content: center;
@@ -506,15 +507,26 @@ nav a:hover {
     gap: 5px;
 }
 
+/* Yahan maine label aur inputs ke beech gap fix kiya hai */
+.input-group {
+    margin-bottom: 15px; 
+}
+
 .input-group label {
+    display: block;
     margin-bottom: 5px;
     letter-spacing: 0.5px;
 }
 
 .input-group input {
+    width: 100%; 
     font-size: 15px;
     font-weight: 500;
     color: var(--black);
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid var(--black);
+    background: transparent;
     transition: 0.3s;
 }
 
@@ -551,18 +563,20 @@ nav a:hover {
 }
 
 /* --- Mobile Responsive for Form --- */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .booking-form {
         padding: 25px 20px;
     }
     
+    /* Grid overlap fix: mobile par rows ko ek ke niche ek kiya */
     .form-grid {
-        grid-template-columns: 1fr !important; /* Mobile par stack ho jayega */
-        gap: 20px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
     }
     
     .swap-icon {
-        display: none; /* Mobile par icon hata rahe hain space bachane ke liye */
+        display: none; 
     }
     
     .input-group.full-width {
