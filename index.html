@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PD4T0LDX1G"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PD4T0LDX1G"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -10,7 +9,6 @@
 
   gtag('config', 'G-PD4T0LDX1G');
 </script>
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18024054784"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -52,6 +50,46 @@
       <div class="hero-image">
         <img src="taxi.png" alt="Hare Krishna Cab Service Taxi">
       </div>
+    </div>
+  </section>
+
+  <section class="booking-container">
+    <div id="form-wrapper" class="booking-form">
+      <form id="cab-booking-form">
+          <h2 style="color: #000; margin-bottom: 15px;">Book Quick Ride Now</h2>
+          
+          <div class="trip-type" style="display: flex; justify-content: space-around; margin-bottom: 20px;">
+              <label style="color: #000;"><input type="radio" name="TripType" value="Oneway" checked> Oneway</label>
+              <label style="color: #000;"><input type="radio" name="TripType" value="RoundTrip"> RoundTrip</label>
+              <label style="color: #000;"><input type="radio" name="TripType" value="Local"> Local</label>
+          </div>
+
+          <div class="form-grid" style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 15px; text-align: left;">
+              <div class="input-group" style="display: flex; flex-direction: column;">
+                  <label style="font-size: 12px; font-weight: bold; color: #333;">Pickup City*</label>
+                  <input type="text" name="PickupCity" placeholder="📍 Ahmedabad" required style="border: none; border-bottom: 1px solid #000; background: transparent; padding: 8px 0; outline: none;">
+              </div>
+              
+              <div class="swap-icon" style="align-self: center; background: #000; color: #fff; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-top: 15px;">⇌</div>
+
+              <div class="input-group" style="display: flex; flex-direction: column;">
+                  <label style="font-size: 12px; font-weight: bold; color: #333;">Drop City*</label>
+                  <input type="text" name="DropCity" placeholder="📍 Vadodara" required style="border: none; border-bottom: 1px solid #000; background: transparent; padding: 8px 0; outline: none;">
+              </div>
+
+              <div class="input-group" style="grid-column: span 3; display: flex; flex-direction: column;">
+                  <label style="font-size: 12px; font-weight: bold; color: #333;">Pickup Date*</label>
+                  <input type="date" name="PickupDate" required style="border: none; border-bottom: 1px solid #000; background: transparent; padding: 8px 0; outline: none;">
+              </div>
+
+              <div class="input-group" style="grid-column: span 3; display: flex; flex-direction: column;">
+                  <label style="font-size: 12px; font-weight: bold; color: #333;">Mobile No*</label>
+                  <input type="tel" name="MobileNo" placeholder="📞 Enter Mobile Number" required style="border: none; border-bottom: 1px solid #000; background: transparent; padding: 8px 0; outline: none;">
+              </div>
+          </div>
+
+          <button type="submit" id="submit-btn" style="background: #000; color: #fff; border: none; padding: 12px 30px; margin-top: 25px; cursor: pointer; font-weight: bold; width: 100%; border-radius: 5px;">EXPLORE CABS</button>
+      </form>
     </div>
   </section>
 
@@ -128,19 +166,17 @@
     <p class="area-note">And all major cities in Gujarat, Maharashtra & Rajasthan.</p>
   </section>
 
-  <!-- NEW SOCIAL SECTION ADDED -->
   <section class="section">
     <p class="sub-heading">TRAVEL UPDATES</p>
     <h2 class="main-title">Our Latest Services & Routes</h2>
 
     <div class="service-grid">
-
       <div class="service-card">
         <img src="luxury-wedding-car-vadodara.jpeg" 
              alt="Luxury Wedding Car Rental in Vadodara Marriage Car Service"
              style="width:100%; border-radius:10px; margin-bottom:10px;">
         <h3>Luxury Wedding Car Rental in Vadodara</h3>
-        <p>Premium luxury cars available for marriage, bride & groom entry and special events with professional chauffeur service.</p>
+        <p>Premium luxury cars available for marriage and special events.</p>
         <a href="https://wa.me/916355937272?text=Hi,%20I%20want%20to%20book%20Luxury%20Wedding%20Car." class="view-details">Book Now →</a>
       </div>
 
@@ -149,7 +185,7 @@
              alt="Vadodara Ahmedabad Mumbai Surat Udaipur One Way Cab Service"
              style="width:100%; border-radius:10px; margin-bottom:10px;">
         <h3>One Way & Outstation Cab Service</h3>
-        <p>Vadodara, Ahmedabad, Mumbai, Surat & Udaipur one way taxi service with fixed pricing. Affordable and reliable travel.</p>
+        <p>Vadodara, Ahmedabad, Mumbai, Surat & Udaipur taxi service with fixed pricing.</p>
         <a href="tel:6355937272" class="view-details">Call Now →</a>
       </div>
 
@@ -157,11 +193,10 @@
         <img src="flight-train-tour-booking-vadodara.jpeg" 
              alt="Flight Ticket Train Booking Tour Package Services in Vadodara Coming Soon"
              style="width:100%; border-radius:10px; margin-bottom:10px;">
-        <h3>Flight Booking, Train Ticket, & Tour Package  – Coming Soon</h3>
-        <p>Flight ticket booking, train reservation, hotel booking and India tour packages including Andaman, North East & Sri Lanka.</p>
+        <h3>Flight & Tour Package – Coming Soon</h3>
+        <p>Flight ticket booking, train reservation, and India tour packages coming soon.</p>
         <a href="https://wa.me/916355937272?text=Hi,%20I%20want%20more%20information%20about%20Tour%20Packages." class="view-details">Inquire →</a>
       </div>
-
     </div>
   </section>
 
@@ -172,7 +207,7 @@
           <img src="hare.png" alt="Logo">
           <span>Hare Krishna Cab Services</span>
         </div>
-        <p>Reliable One Way & Outstation Cab Service from Vadodara & Ahmedabad. High quality service at fixed prices.</p>
+        <p>Reliable One Way & Outstation Cab Service from Vadodara & Ahmedabad.</p>
       </div>
       <div class="footer-links">
         <h4>Quick Links</h4>
@@ -201,6 +236,32 @@
     <a href="tel:6355937272" class="btn-call-sticky">📞 Call</a>
     <a href="https://wa.me/916355937272" class="btn-wa-sticky">💬 WhatsApp</a>
   </div>
+
+  <script>
+    // Web App URL integrated
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzSC-6hgEnoGyy83ktT8aqrZTaWCuF6gGf7FxgkiVxvqjWj7Fi2xBAUV8NeDzSmdncXQQ/exec' 
+    
+    const form = document.getElementById('cab-booking-form')
+    const btn = document.getElementById('submit-btn')
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      btn.disabled = true
+      btn.innerHTML = "Processing..."
+      
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            // Redirect to thank-you page
+            window.location.href = "thank-you.html";
+        })
+        .catch(error => {
+            console.error('Error!', error.message)
+            btn.disabled = false
+            btn.innerHTML = "EXPLORE CABS"
+            alert("Something went wrong. Please try again or call us directly.")
+        })
+    })
+  </script>
 
 </body>
 </html>
