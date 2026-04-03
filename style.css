@@ -470,3 +470,106 @@ nav a:hover {
     font-size: 14px;
   }
 }
+/* --- Booking Form Section --- */
+.booking-container {
+    background: var(--black); /* Background black rakha hai taaki yellow form standout kare */
+    padding: 60px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.booking-form {
+    background: var(--yellow);
+    padding: 40px;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 20px 40px rgba(255, 204, 0, 0.3);
+    position: relative;
+}
+
+.booking-form h2 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.trip-type label {
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+.input-group input {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--black);
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-bottom: 2px solid var(--black) !important;
+}
+
+.swap-icon {
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.swap-icon:hover {
+    transform: scale(1.1) rotate(180deg);
+}
+
+#submit-btn {
+    transition: 0.3s ease;
+    font-size: 16px;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+#submit-btn:hover {
+    background: #222;
+    transform: translateY(-3px);
+}
+
+#submit-btn:disabled {
+    background: #666;
+    cursor: not-allowed;
+}
+
+/* --- Mobile Responsive for Form --- */
+@media (max-width: 480px) {
+    .booking-form {
+        padding: 25px 20px;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr !important; /* Mobile par stack ho jayega */
+        gap: 20px !important;
+    }
+    
+    .swap-icon {
+        display: none; /* Mobile par icon hata rahe hain space bachane ke liye */
+    }
+    
+    .input-group.full-width {
+        grid-column: span 1 !important;
+    }
+
+    .booking-form h2 {
+        font-size: 20px;
+    }
+}
